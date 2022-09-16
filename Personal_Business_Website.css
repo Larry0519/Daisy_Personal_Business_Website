@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .max-width{
     max-width: 1700px;
     padding: 0 80px;
@@ -111,6 +115,7 @@ section .title::after{
     display: inline-block;
 }
 .navbar .menu li a{
+    display: block;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -131,6 +136,31 @@ section .title::after{
     font-size: 23px;
     cursor: pointer;
     display: none;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background-color: crimson;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    opacity: 1;
+    bottom: 30px;
+    pointer-events: auto;
 }
 
 /* home section style */
@@ -199,40 +229,40 @@ section .title::after{
 }
 
 
-.about .about-content .left{
+.about .about-content .infoLeft{
     width: 50%;
 }
 
-.about .about-content .left img{
+.about .about-content .infoLeft img{
     width: 500px;
-    height: 500px;
+    height: 450px;
     object-fit: cover;
     border-radius: 6px;
 }
 
-.about .about-content .right{
+.about .about-content .infoRight{
     width: 50%;
     line-height: 30px;
 }
 
-.about .about-content .right .text{
+.about .about-content .infoRight .text{
     line-height: 40px;
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.about .about-content .right .text span{
+.about .about-content .infoRight .text span{
     color: crimson;
 }
 
-.about .about-content .right  p{
+.about .about-content .infoRight  p{
     text-align: justify;
     line-height: 40px;
     font-size: 20px;
 }
 
-.about .about-content .right a{
+.about .about-content .infoRight a{
     display: inline-block;
     background: crimson;
     color: #fff;
@@ -246,7 +276,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 
-.about .about-content .right a:hover{
+.about .about-content .infoRight a:hover{
     color: crimson;
     background: none;
 }
@@ -273,11 +303,11 @@ section .title::after{
     
 }
 
-.company .company-content .left{
+.company .company-content .infoLeft{
     width: 45%;
 }
 
-.company .company-content .right{
+.company .company-content .infoRight{
     width: 45%;
 }
 
@@ -288,7 +318,7 @@ section .title::after{
     margin-bottom: 10px;
 }
 
-.company .company-content .right a{
+.company .company-content .infoRight a{
     display: inline-block;
     position: relative;
     background: crimson;
@@ -310,7 +340,7 @@ section .title::after{
     left: 150px;
 }
 
-.company .company-content .right a:hover{
+.company .company-content .infoRight a:hover{
     color: crimson;
     background: #fff;
 }
@@ -462,27 +492,26 @@ section .title::after{
 
 }
 
-.contact .infoRight form .fields,
+.contact .infoRight form .field,
 .contact .infoRight form .fields .field{
     height: 45px;
     width: 100%;
     margin-bottom: 15px;
 }
 
+.contact .infoRight form .textarea{
+    width: 100%;;
+    height:80px;
+}
+
 .contact .infoRight form .name{
     margin-right: 10px;
 }
 
+
 .contact .infoRight form .email{
     margin-left: 10px;
 }
-
-
-.contact .infoRight form .field input{
-    width: 100%;
-    height: 100%;
-}
-
 
 
 .contact .infoRight form .field input,
@@ -498,11 +527,57 @@ section .title::after{
     transition: all 0.3s ease;
 }
 
+.contact .infoRight form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .infoRight form .button{
+    width: 100%;
+    height: 50px;
+}
+
+.contact .infoRight form .button button{
+    width: 170px;
+    height: 100%;
+    border: 2px solid crimson;
+    background-color: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.contact .infoRight form .button button:hover{
+    color: crimson;
+    background-color: #fff;
+}
+
+
+/* footer section styling */
+footer{
+    background-color: #111;
+    padding: 20px 23px;
+    color: #fff;
+
+}
+
+footer span a{
+    color: crimson;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
 
 /* resonsive media query start */
 
 @media (max-width: 1353px) {
-    .about .about-content .left img{
+    .about .about-content .infoLeft img{
         height: 350px;
         width: 350px;
     }
@@ -561,29 +636,35 @@ section .title::after{
         width: 45%;
     }
     
-    /* .about .about-content .right{
+    /* .about .about-content .infoRight{
        flex: 100%;
        
     } */
 
-    .about .about-content .left{
+    .about .about-content .infoLeft{
         display: flex;
         justify-content: center;
         margin-right: 0 auto 60px;
     }
 
-    .about .about-content .right .text{
+    .about .about-content .infoRight .text{
         font-size: 20px;
         font-weight: 600;
     }
 
-    .about .about-content .right p{
+    .about .about-content .infoRight p{
         font-size: 15px;
     }
 
     .services .serv-content .card{
-        width: 100%;
+        width: calc(50% -10px);
         margin-bottom: 20px;
+    }
+
+    .company .company-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
     }
 }
 
@@ -600,10 +681,10 @@ section .title::after{
     .home .home-content a{
         font-size: 20px;
     }
-    .about .about-content .right{
+    .about .about-content .infoRight{
         width: 100%;
     }
-    .about .about-content .left{
+    .about .about-content .infoLeft{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -625,20 +706,20 @@ section .title::after{
 
    
 
-    .about .about-content .right .text,
-    .company .company-content .left .text{
+    .about .about-content .infoRight .text,
+    .company .company-content .infoLeft .text{
         font-size: 19px;
     }
 
 
-    .contact .right form .fields{
+    .contact .infoRight form .fields{
         flex-direction: column;
     }
-    .contact .right form .name,
-    .contact .right form .email{
+    .contact .infoRight form .name,
+    .contact .infoRight form .email{
         margin: 0;
     }
-    .right form .error-box{
+    .infoRight form .error-box{
        width: 150px;
     }
     .scroll-up-btn{

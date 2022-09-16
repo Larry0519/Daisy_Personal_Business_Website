@@ -11,21 +11,25 @@
       src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
       integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
       crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   </head>
   <body>
-    <!-- navbar part -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <!-- navbar section start -->
     <nav class="navbar">
       <div class="max-width">
         <div class="logo">
           <a href="#">Portfo<span>lio.</span> </a>
         </div>
         <ul class="menu">
-          <li><a href="#"> Home </a></li>
-          <li><a href="#"> About </a></li>
-          <li><a href="#"> Company </a></li>
-          <li><a href="#"> Service </a></li>
-          <li><a href="#"> Teams </a></li>
-          <li><a href="#"> Contact Us</a></li>
+          <li><a href="#home"> Home </a></li>
+          <li><a href="#about"> About </a></li>
+          <li><a href="#company"> Company </a></li>
+          <li><a href="#services"> Service </a></li>
+          <li><a href="#teams"> Teams </a></li>
+          <li><a href="#contact"> Contact Us</a></li>
         </ul>
         <div class="menu-btn">
             <i class="fas fa-bars"></i>
@@ -40,8 +44,8 @@
         <div class="home-content">
           <div class="text-1">Hello, my name is</div>
           <div class="text-2">Jia Zhang</div>
-          <div class="text-3">And I am <span>COO at GW Technology </span></div>
-          <a href="#">Know More About Me</a>
+          <div class="text-3">And I am <span class="typing">COO at GW Technology </span></div>
+          <a href="https://www.linkedin.com/in/jia-zhang-269097190/">Know More About Me</a>
         </div>
 
       </div>
@@ -52,10 +56,10 @@
         <div class="max-width">
             <h2 class="title">About me</h2>
             <div class="about-content">
-                <div class="column left">
+                <div class="column infoLeft">
                     <img src="./IMG/daisy-about.jpeg" alt="">
                 </div>
-                <div class="column right">
+                <div class="column infoRight">
                     <div class="text">
                         I am Jia Zhang and I am building  <span>Block Chain Game Platform</span>
                     </div>
@@ -77,14 +81,14 @@
         <div class="max-width">
             <h2 class="title"> Our Company</h2>
             <div class="company-content">
-                <div class="column left">
+                <div class="column infoLeft">
                    <div class="text">GW Technology </div>
                    <p>
                     GW Technology implements web 3.0 technologies in gaming and digital assets for the community.
                     Our main business is blockchain games transformation and NFT services. The GW SDKs provide convenient access to the GW APIs , Smart Contract methods for applications, assisting games studios in establishing a mature economic and education system. For NFT services, we provide consultation and assessment on client project and cost-effective solutions for NFT minting. We aim to be the Steam for blockchain mobile games.
                    </p>
                 </div>
-                <div class="column right">
+                <div class="column infoRight">
                   <div class="text">Game Wonderlab</div>
                   <p>
                     Game Wonderlab is a comprehensive blockchain mobile gaming platform with thousands of blockchain-powered mobile games and hundreds of game development studio partners. The vision of Game Wonderlab is to become a compatible platform for both IOS and Android mobile system and "make sure all the Web 3.0 mobile games are in Game Wonderlab. Be Steam for mobile blockchain games.
@@ -175,6 +179,7 @@
       </div>
     </section>
     
+    <!-- contact section start -->
     <section class="contact" id="contact">
       <div class="max-width">
         <h2 class="title"> Contact me </h2>
@@ -194,7 +199,7 @@
                 <i class="fas fa-map-marker-alt"></i>
                 <div class="info">
                   <div class="head">Address</div>
-                  <div class="sub-title">37 Chandler Street,Belconnen,ACT</div>
+                  <div class="sub-title">GamePlus, Canberra Technology Park, Waston</div>
                 </div>
               </div>
               <div class="row">
@@ -202,13 +207,6 @@
                 <div class="info">
                   <div class="head">Email</div>
                   <div class="sub-title">jia.zhang@alumni.anu.edu.au</div>
-                </div>
-              </div>
-              <div class="row">
-                <i class="fas fa-phone-alt"></i>
-                <div class="info">
-                  <div class="head">Phone</div>
-                  <div class="sub-title">0451 095 866</div>
                 </div>
               </div>
             </div>
@@ -240,6 +238,11 @@
       </div>
 
     </section>
+
+    <!-- footer section start -->
+    <footer>
+        <span> Created By <a href="#">Zizhao(Larry) Liang</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
+    </footer>
 
 
 
