@@ -30,9 +30,9 @@ $(document).ready(function(){
 
     // typing animation script
     let typed = new Typed(".typing",{
-        strings: ["COO at GW Technology", "Co-founder at GW Technology"],
+        strings: ["COO at GW Technology", "Co-founder at GW Technology","COO at GW Technology", "Co-founder at GW Technology"],
         typeSpeed: 100,
         backSpeed: 60,
-        loop: true
+        loop: true,
     });
    

@@ -1,0 +1,22 @@
+{
+  "name": "daisy_personal_business_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Personal_Business_Website.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Larry0519/Daisy_Personal_Business_Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Larry0519/Daisy_Personal_Business_Website/issues"
+  },
+  "homepage": "https://github.com/Larry0519/Daisy_Personal_Business_Website#readme",
+  "dependencies": {
+    "sass": "^1.54.9"
+  }
+}
